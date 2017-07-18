@@ -51,7 +51,7 @@ class CreateController extends Controller
         }
 
         $row = TemplateFace::where('id', $tplid)->first();
-        $img = \Image::make(storage_path('app/public') . "\\" . $row->path);
+        $img = \Image::make(storage_path('app/public') . "/" . $row->path);
         // echo public_path('fonts') . '/simhei.ttf';die;
         $img->text($phrase, 150, 280, function($font) {
             $font->file(public_path('fonts') . '\simhei.ttf');
