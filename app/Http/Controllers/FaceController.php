@@ -22,7 +22,7 @@ class FaceController extends Controller
     		\App::abort(404);
     	}
     	
-    	$facelist = Face::where('navid', $navid)->paginate(16);
+    	$facelist = Face::where('navid', $navid)->orderBy('id', 'desc')->paginate(16);
 
     	return view('facelist', [
     		'navs' => $navs, 
