@@ -31,7 +31,7 @@
 							</div>
 
 							<div class="media-right">
-								<a href='{{ url("storage/download/{$article->zip}") }}'><font size="4" class="glyphicon glyphicon-save"></font></a>
+								<a href='{{ url("storage/download/{$article->zip}") }}'><font size="3" class="glyphicon glyphicon-download-alt"></font></a>
 							</div>
 						</div>
 					</li>
