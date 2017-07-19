@@ -201,23 +201,23 @@ class BackendController extends Controller
         $files = $request->file('imgs');
 
         if(!$title){
-            \App::abort(400);
+            \App::abort(400, "the title was missing");
         }
 
         if(!$desc){
-            \App::abort(400);
+            \App::abort(400, "the desc was missing");
         }
 
         if(!count($files)){
-            \App::abort(400);
+            \App::abort(400, "the file was missing");
         }
 
         $thumb_img = \Image::make($files[0]);
         $thumb_img->widen(100);
         $mime = $files[0]->getMimeType();
 
-        if($mime != 'image/jpeg' && $mime != 'image/gif'){
-            \App::abort(400);
+        if($mime != 'image/jpeg' && $mime != 'image/gif' && $mime != 'image/png'){
+            \App::abort(400, "file is not image");
         }
 
         $fileext = $files[0]->getClientOriginalExtension();
@@ -236,7 +236,7 @@ class BackendController extends Controller
         foreach ($files as $key => $file) {
             $mime = $file->getMimeType();
             
-            if($mime != 'image/jpeg' && $mime != 'image/gif'){
+            if($mime != 'image/jpeg' && $mime != 'image/gif' && $mime != 'image/png'){
                 continue;
             }
 
