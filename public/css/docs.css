@@ -2,7 +2,7 @@
 * @Author: liu602348184
 * @Date:   2017-07-12 22:57:11
 * @Last Modified by:   liu602348184
-* @Last Modified time: 2017-07-17 04:34:39
+* @Last Modified time: 2017-07-19 19:41:51
 */
 .footer{
 	padding-top: 30px;
@@ -64,7 +64,7 @@
 .scrollpanel>ul>li{
 	display: block;
 	float: left;
-	margin: 5px;
+	margin: 4px;
 	border: dashed 1px #ddd;
 }
 
