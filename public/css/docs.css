@@ -2,7 +2,7 @@
 * @Author: liu602348184
 * @Date:   2017-07-12 22:57:11
 * @Last Modified by:   liu602348184
-* @Last Modified time: 2017-07-19 19:41:51
+* @Last Modified time: 2017-07-19 20:20:59
 */
 .footer{
 	padding-top: 30px;
@@ -50,7 +50,7 @@
 	height: 100%;
 	border: solid 1px #ddd;
 	border-radius: 4px;
-	padding: 10px;
+	padding: 9px;
 	overflow: hidden;
     overflow-y: scroll;
 }
