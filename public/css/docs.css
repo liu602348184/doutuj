@@ -2,7 +2,7 @@
 * @Author: liu602348184
 * @Date:   2017-07-12 22:57:11
 * @Last Modified by:   liu602348184
-* @Last Modified time: 2017-07-20 02:24:22
+* @Last Modified time: 2017-07-20 03:05:26
 */
 .footer{
 	padding-top: 30px;
@@ -91,6 +91,7 @@
 	float: left;
 	border: solid 1px #ddd;
 	margin: 2px;
+	overflow: hidden;
 }
 
 .facelist>li>.facepic{
