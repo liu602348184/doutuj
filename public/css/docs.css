@@ -2,7 +2,7 @@
 * @Author: liu602348184
 * @Date:   2017-07-12 22:57:11
 * @Last Modified by:   liu602348184
-* @Last Modified time: 2017-07-19 20:20:59
+* @Last Modified time: 2017-07-19 21:10:39
 */
 .footer{
 	padding-top: 30px;
@@ -117,8 +117,8 @@
 	display: block;
 	float: left;
 	padding: 10px;
-	border-left: dashed 2px #ddd;
-	border-top: dashed 2px #ddd;
+	border-left: dashed 1px #ddd;
+	/*border-top: dashed 2px #ddd;*/
 }
 
 .imglist{
