@@ -5,7 +5,7 @@
 		<div class="row">
 			<div class="col-xs-12 col-md-12">
 				<div class="page-header">
-				  	<h3>在线生成表情包 <small>快速生成表情包</small></h3>
+				  	<h3>yield('title') <small>快速生成表情包</small></h3>
 				</div>
 			</div>
 		</div>
@@ -103,4 +103,8 @@
 
 @section('home')
 	active
+@endsection
+
+@section('title')
+	在线生成表情包
 @endsection

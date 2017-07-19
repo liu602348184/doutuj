@@ -44,3 +44,7 @@
 		</div>
 	</div>
 @endsection
+
+@section('title')
+	{{ $subtitle }}
+@endsection

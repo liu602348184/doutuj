@@ -56,3 +56,7 @@
 	</div>
 </div>
 @endsection
+
+@section('title')
+	{{ $article->title }}
+@endsection
