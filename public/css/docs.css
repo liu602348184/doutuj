@@ -2,7 +2,7 @@
 * @Author: liu602348184
 * @Date:   2017-07-12 22:57:11
 * @Last Modified by:   liu602348184
-* @Last Modified time: 2017-07-19 23:01:11
+* @Last Modified time: 2017-07-19 23:03:17
 */
 .footer{
 	padding-top: 30px;
@@ -83,9 +83,7 @@
 	list-style: none;
 	padding: 0px;
 	float: left;
-	border: dashed 2px #ddd;
 	margin-top: 10px;
-	border-radius: 5px;
 }
 
 .facelist>li{
