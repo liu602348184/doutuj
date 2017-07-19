@@ -51,18 +51,26 @@ class CreateController extends Controller
         }
 
         $row = TemplateFace::where('id', $tplid)->first();
-        $img = \Image::make(storage_path('app/public') . "/" . $row->path);
-        // echo public_path('fonts') . '/simhei.ttf';die;
-        $img->text($phrase, 150, 280, function($font) {
-            $font->file(public_path('fonts') . '\simhei.ttf');
-            $font->size(20);
-            $font->color('#000000');
-            $font->align('center');
-            $font->valign('bottom');
-        });
+        // $img = \Image::make(storage_path('app/public') . "/" . $row->path);
+        $img = imagecreatefromstring(file_get_contents(storage_path("app/public/{$row->path}")));
+        $font = public_path("fonts/simhei.ttf");
+        $black = imagecolorallocate($img, 0x00, 0x00, 0x00);
+        $width = imagesx($img); 
+        $center = ($width / 2 ) - (int)(mb_strlen($phrase) * 25 / 2);
+        // var_dump(mb_strlen($phrase) * 25);die;
+        imagefttext($img, 20, 0, $center, 280, $black, $font, $phrase);
+        // $img->text($phrase, 150, 280, function($font) {
+        //     $font->file(public_path('fonts') . '\simhei.ttf');
+        //     $font->size(20);
+        //     $font->color('#000000');
+        //     $font->align('center');
+        //     $font->valign('bottom');
+        // });
+
 
         $filename = 'createface/' . md5(time() . microtime() . $phrase) . ".jpg";
-        $img->save(storage_path('app/public') . '/' . $filename);
+        imagejpeg($img, storage_path("app/public/{$filename}"));
+        // $img->save(storage_path('app/public') . '/' . $filename);
         $createface = new CreateFace();
         $createface->tplid = $tplid;
         $createface->phrase = $phrase;
