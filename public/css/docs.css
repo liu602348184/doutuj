@@ -2,7 +2,7 @@
 * @Author: liu602348184
 * @Date:   2017-07-12 22:57:11
 * @Last Modified by:   liu602348184
-* @Last Modified time: 2017-07-20 00:40:56
+* @Last Modified time: 2017-07-20 02:24:22
 */
 .footer{
 	padding-top: 30px;
@@ -130,4 +130,12 @@
 
 .imglist>li{
 	display: inline-block; 
+}
+
+.news .media-body{
+	font-size: 0.8em;
+}
+
+.news .media-body>h4{
+	font-size: 1.4em;
 }

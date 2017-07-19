@@ -25,7 +25,7 @@
 				<div class="page-header" style="margin-top:27px">
 				  	<h4>最新文章</h4>
 				</div>
-				<div class="" style="padding-top: 10px">
+				<div class="news" style="padding-top: 10px">
 					@foreach($news as $article)
 			        	<div class="media">
 						  	<div class="media-left">

@@ -37,7 +37,7 @@
 			<div class="page-header">
 			  	<h4>最新文章</h4>
 			</div>
-			<div class="" >
+			<div class="news" >
 				@foreach($news as $article)
 		        	<div class="media">
 					  	<div class="media-left">
