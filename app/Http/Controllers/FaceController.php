@@ -29,7 +29,8 @@ class FaceController extends Controller
     		'facelist' => $facelist,
     		'navid' => $navid,
     		'subtitle' => $current->title,
-            'news' => $this->news
+            'news' => $this->news,
+            'title' => $current->title
     	]);
     }
 

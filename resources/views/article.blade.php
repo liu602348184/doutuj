@@ -5,7 +5,7 @@
 		<div class="row">
 			<div class="col-xs-12 col-md-12">
 				<div class="page-header">
-				  	<h3>@yield('title')</h3>
+				  	<h3>{{ $title }}</h3>
 				</div>
 			</div>
 		</div>
@@ -51,6 +51,3 @@
 	active
 @endsection
 
-@section('title')
-	表情包下载
-@endsection

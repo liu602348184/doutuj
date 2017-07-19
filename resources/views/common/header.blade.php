@@ -2,7 +2,7 @@
 <html lang="{{ app()->getLocale() }}">
     <head>
         <meta charset="UTF-8">
-        <title>@yield('title') | 斗图界</title>
+        <title>{{ $title }} | 斗图界</title>
         <meta name="description" content="斗图界是一个专注于表情包斗图的网站，快速帮你生成表情包，让你在斗图大战中反败为胜！"/>
         <meta name="keywords" content="表情包下载,快速生成表情包,在线生成表情包,聊天图片大全,斗图终结者,张学友表情,熊猫头表情,金馆长表情,在线表情包制作,表情包,斗图在线制作,斗图表情包在线制作,斗图网站,斗图制作网站,表情包图片,表情图,斗图,金馆长,斗图大会"/>
         <link rel="shortcut icon" href="favicon.ico">

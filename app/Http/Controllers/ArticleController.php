@@ -15,7 +15,7 @@ class ArticleController extends Controller
 
     public function index(){
     	$articles = Article::orderBy('id', 'desc')->paginate(10);
-        return view('article', ['navs' => $this->navs, 'articles' => $articles]);
+        return view('article', ['navs' => $this->navs, 'articles' => $articles, 'title' => '表情包下载']);
     }
 
     public function detail($id){
@@ -37,7 +37,8 @@ class ArticleController extends Controller
     		'paths' => $parr,
     		'pre' => $pre,
     		'next' => $next,
-    		'news' => $news
+    		'news' => $news,
+            'title' => $article->title
     	]);
     }
 }
