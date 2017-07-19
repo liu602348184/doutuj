@@ -6,7 +6,7 @@
     <div class="row">
     	<div class="container">
     		<div class="row">
-		        <div class="col-md-4">
+		        <div class="col-md-3">
 		        	<form action="{{ env('APP_URL') }}/backend122/inserttplface" enctype="multipart/form-data" method="post">
 			            <div class="panel panel-default">
 			                <div class="panel-heading">Dashboard</div>
@@ -24,7 +24,7 @@
 		        	</form>
 		        </div>
 
-		        <div class="col-xs-12 col-md-8" style="height:353px">
+		        <div class="col-xs-12 col-md-9" style="height:353px">
 					<div class="scrollpanel">
 						<ul id="piclist">
 							@foreach ($tpllist as $li)
