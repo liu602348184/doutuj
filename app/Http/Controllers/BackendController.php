@@ -149,7 +149,7 @@ class BackendController extends Controller
             // echo $file->getClientOriginalName();
             $mime = $file->getMimeType();
 
-            if($mime != 'image/jpeg' && $mime != 'image/gif'){
+            if($mime != 'image/jpeg' && $mime != 'image/gif' && $mime != 'image/png'){
                 continue;
             }
 
