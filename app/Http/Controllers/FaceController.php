@@ -10,7 +10,7 @@ class FaceController extends Controller
 {
     private $news;
     public function __construct(){
-        $this->news = \App\Article::orderBy('id', 'desc')->get()->all();
+        $this->news = \App\Article::orderBy('id', 'desc')->limit(10)->get()->all();
     }
 
     public function facelist($navid){

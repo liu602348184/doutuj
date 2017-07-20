@@ -29,7 +29,7 @@ class ArticleController extends Controller
 		$parr = explode(',', $paths);
 		$next = Article::where('id', '<', $id)->orderBy('id', 'desc')->limit(1)->get()->first();
 		$pre = Article::where('id', '>', $id)->orderBy('id')->limit(1)->get()->first();
-		$news = \App\Article::orderBy('id', 'desc')->get()->all();
+		$news = \App\Article::orderBy('id', 'desc')->limit(10)->get()->all();
 		// var_dump($pre->title, $next->title);
     	return view("detail", [
     		'navs' => $this->navs, 
