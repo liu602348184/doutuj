@@ -2,8 +2,12 @@
 * @Author: liu602348184
 * @Date:   2017-07-12 22:57:11
 * @Last Modified by:   liu602348184
-* @Last Modified time: 2017-07-21 00:09:51
+* @Last Modified time: 2017-07-22 04:28:03
 */
+.html{
+	overflow-y: scroll;
+}
+
 .footer{
 	padding-top: 30px;
 	width: 100%;
