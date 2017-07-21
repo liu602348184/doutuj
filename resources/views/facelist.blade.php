@@ -5,18 +5,14 @@
 
 		<div class="row">
 			<div class="col-xs-12 col-md-8">
-				<div class="col-xs-12 col-md-12">
-					<div class="page-header">
-					  	<h3>{{ $subtitle }}</h3>
-					</div>
+				<div class="page-header">
+				  	<h3>{{ $subtitle }}</h3>
 				</div>
-				<div class="col-xs-12 col-md-12">
-					<ul class="facelist">
-						@foreach($facelist as $face)
-						<li><div class="facepic"><img src='{{ url("storage/{$face->path}") }}' alt=""></div></li>
-						@endforeach
-					</ul>
-				</div>
+				<ul class="facelist">
+					@foreach($facelist as $face)
+					<li><div class="facepic"><img src='{{ url("storage/{$face->path}") }}' alt=""></div></li>
+					@endforeach
+				</ul>
 				<div class="pull-left col-md-12">
 					{{ $facelist->links() }}
 				</div>
