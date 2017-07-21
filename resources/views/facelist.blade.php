@@ -13,7 +13,7 @@
 					<li><div class="facepic"><img src='{{ url("storage/{$face->path}") }}' alt=""></div></li>
 					@endforeach
 				</ul>
-				<div class="pull-left col-md-12">
+				<div class="pull-left">
 					{{ $facelist->links() }}
 				</div>
 			</div>
