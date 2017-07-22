@@ -5,7 +5,17 @@
 					<p>联系我们：602348184@qq.com</p>
 				</div>
 			</footer>
-			<script src="{{ env('APP_URL') }}/js/jquery.min.js"></script>
+			<!--[if lt IE 9]>
+				<script src="{{ env('APP_URL') }}/js/jquery-1.9.1-min.js"></script>
+				<script src="{{ env('APP_URL') }}/js/respond.src.js"></script>
+			<![endif]-->
+			<!--[if gte IE 9]>
+				<script src="{{ env('APP_URL') }}/js/jquery.min.js"></script>
+			<![endif]-->
+			<!--[if !IE]>
+				<!-->
+				<script src="{{ env('APP_URL') }}/js/jquery.min.js"></script>
+			<![endif]-->
 			<script src="{{ env('APP_URL') }}/js/bootstrap.min.js"></script>
 		</div>
 	</body>
