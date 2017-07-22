@@ -38,28 +38,28 @@
 				</div>
 			</div>
 		</div>
-		<div class="modal fade bs-example-modal-sm" id="createface" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
-			<div class="modal-dialog modal-sm" role="document">
-			    <div class="modal-content">
-			       	<div class="modal-header">
-				        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				        <h4 class="modal-title" id="myModalLabel">表情预览</h4>
-				    </div>
-				    <div class="modal-body">
-				    	<div class="preview">
-				    		<img width='100%' id="preview_pic" src="#" alt="">
-				    	</div>
-				    	<div>
-				    		<a id="download" href="#">
-				    			<span class="glyphicon glyphicon-download-alt pull-right"></span>
-				    		</a>
-				    		<div style="clear:both"></div>
-				    	</div>
-				    </div>
-			    </div>
-			</div>
-		</div>	 
 	</div>
+	<div class="modal fade bs-example-modal-sm" id="createface" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+		<div class="modal-dialog modal-sm" role="document">
+		    <div class="modal-content">
+		       	<div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			        <h4 class="modal-title" id="myModalLabel">表情预览</h4>
+			    </div>
+			    <div class="modal-body">
+			    	<div class="preview">
+			    		<img width='100%' id="preview_pic" src="#" alt="">
+			    	</div>
+			    	<div>
+			    		<a id="download" href="#">
+			    			<span class="glyphicon glyphicon-download-alt pull-right"></span>
+			    		</a>
+			    		<div style="clear:both"></div>
+			    	</div>
+			    </div>
+		    </div>
+		</div>
+	</div>	 
 	<script>
 		var domain = "{{ env('APP_URL') }}";
 		var _token = "{{ csrf_token() }}";
