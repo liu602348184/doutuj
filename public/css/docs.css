@@ -2,10 +2,14 @@
 * @Author: liu602348184
 * @Date:   2017-07-12 22:57:11
 * @Last Modified by:   liu602348184
-* @Last Modified time: 2017-07-22 10:42:50
+* @Last Modified time: 2017-07-22 10:55:44
 */
 html{
 	overflow-y: scroll;
+}
+
+body{
+	padding-right: 0px !important;
 }
 
 .footer{
@@ -145,9 +149,4 @@ html{
 
 .news .media-body>h4{
 	font-size: 1.4em;
-}
-
-.modal-open .modal{
-    overflow-x: hidden;
-    overflow-y: hidden;
 }
