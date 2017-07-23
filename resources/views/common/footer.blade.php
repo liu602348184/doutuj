@@ -7,7 +7,6 @@
 			</footer>
 			<!--[if lt IE 9]>
 				<script src="{{ env('APP_URL') }}/js/jquery-1.9.1-min.js"></script>
-				<script src="{{ env('APP_URL') }}/js/respond.src.js"></script>
 			<![endif]-->
 			<!--[if gte IE 9]>
 				<script src="{{ env('APP_URL') }}/js/jquery.min.js"></script>
