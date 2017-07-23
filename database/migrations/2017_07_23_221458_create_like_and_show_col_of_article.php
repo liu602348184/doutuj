@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateZipCol extends Migration
+class CreateLikeAndShowColOfArticle extends Migration
 {
     /**
      * Run the migrations.
@@ -14,7 +14,8 @@ class CreateZipCol extends Migration
     public function up()
     {
         Schema::table('article', function (Blueprint $table) {
-            $table->string('zip');
+            $table->integer('like');
+            $table->integer('show');
         });
     }
 
@@ -26,7 +27,8 @@ class CreateZipCol extends Migration
     public function down()
     {
         Schema::table('article', function (Blueprint $table) {
-            $table->dropColumn('zip');
+            $table->dropColumn('like');
+            $table->dropColumn('show');
         });
     }
 }

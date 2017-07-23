@@ -2,7 +2,7 @@
 * @Author: liu602348184
 * @Date:   2017-07-12 22:57:11
 * @Last Modified by:   liu602348184
-* @Last Modified time: 2017-07-22 10:55:44
+* @Last Modified time: 2017-07-23 23:19:55
 */
 html{
 	overflow-y: scroll;
@@ -31,7 +31,7 @@ body{
 
 .h_logo{
 	height: 50px;
-    width: 140px;
+    width: 120px;
     background-repeat: no-repeat;
 	background-image: url(../img/logo.png);
 	background-size: 120px auto;
@@ -128,8 +128,12 @@ body{
 	float: left;
 	padding: 10px;
 	border-left: dashed 1px #ddd;
-	height: 100px;
+    border-bottom: dashed 1px #ddd;
+	height: 140px;
 	overflow: hidden;
+}
+.articlelist>.linefirst{
+	border-left: none;
 }
 
 .imglist{
@@ -150,3 +154,31 @@ body{
 .news .media-body>h4{
 	font-size: 1.4em;
 }
+
+.articlelist .media-left{
+	/*display: block;
+	float: left;*/
+	height: 100px;
+	overflow: hidden;
+}
+
+.label{
+	padding: 3px 8px 3px 8px;
+	margin-right: 3px;
+}
+
+.text{
+	display: inline-block;
+	line-height: 20px;
+	vertical-align: top;
+}
+
+.detail .detail-info{
+	width: 100%;
+}
+
+/*.media-body{
+	display: block;
+	float: left;
+	width: auto !important;
+}*/

@@ -43,6 +43,7 @@ Route::group(['middleware' => 'auth'], function(){
 Route::get('/', 'CreateController@index')->name('home');
 Route::get('/article', 'ArticleController@index');
 Route::get('/article/{id}.html', 'ArticleController@detail');
+Route::post('/article/thumbs_up', 'ArticleController@thumbs_up');
 // Route::get('/article/download/{id}.zip');
 // Route::get('/image/tplface/{id}.jpg', 'StorageController@tplface');
 // Route::get('/image/createface/{id}.jpg', 'StorageController@createface');

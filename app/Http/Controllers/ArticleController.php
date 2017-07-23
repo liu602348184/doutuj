@@ -25,6 +25,7 @@ class ArticleController extends Controller
 			\App::abort(404);
 		}   
 		
+        $article->show();
 		$paths = $article->paths;
 		$parr = explode(',', $paths);
 		$next = Article::where('id', '<', $id)->orderBy('id', 'desc')->limit(1)->get()->first();
@@ -40,5 +41,33 @@ class ArticleController extends Controller
     		'news' => $news,
             'title' => $article->title
     	]);
+    }
+
+    public function thumbs_up(Request $request){
+        $id = $request->input('id');
+
+        if($request->session()->get('thumbs_up', false)){
+            $thumbs_up = $request->session()->get('thumbs_up');
+            
+            if(isset($thumbs_up[$id])){
+                echo json_encode(['success' => false, 'msg' => '你已经顶过了']);
+                die;
+            }
+        }
+
+        $article = Article::find($id);
+
+        if(!$article){
+            \App::abort(400);
+        }
+
+        $article->like += 1;
+        
+        if($article->save()){
+            $request->session()->put('thumbs_up', ["{$id}" => true]);
+            echo json_encode(['success' => true, 'like' => $article->like]);
+        } else {
+            echo json_encode(['success' => false]);
+        }
     }
 }

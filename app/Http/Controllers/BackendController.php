@@ -197,8 +197,15 @@ class BackendController extends Controller
 
     public function create_article(Request $request){
         $title = $request->input('title');
-        $desc = $request->input('desc');
+        $tags  = $request->input('tags');
+        $desc  = $request->input('desc');
+        $id    = $request->input('id');
         $files = $request->file('imgs');
+
+        if($id){
+            return $this->edit_article($request);
+            die;
+        }
 
         if(!$title){
             \App::abort(400, "the title was missing");
@@ -253,11 +260,35 @@ class BackendController extends Controller
         $article->title = $title;
         $article->desc  = $desc;
         $article->zip   = $zip_name;
+        $article->tags  = $tags;
 
         if($article->save()){
             $zipper->close();
             return redirect()->route('article');
         }
+
+        \App::abort(500);
+    }
+
+    private function edit_article(Request $request){
+        $title = $request->input('title');
+        $tags  = $request->input('tags');
+        $desc  = $request->input('desc');
+        $id    = $request->input('id');
+
+        $article = Article::find($id);
+
+        if(!$article){
+            \App::abort(404);
+        }
+
+        $article->title = $title;
+        $article->tags = $tags;
+        $article->desc = $desc;
+
+        if($article->save()){
+            return redirect()->route('article');
+        } 
 
         \App::abort(500);
     }
