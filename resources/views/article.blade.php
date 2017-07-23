@@ -19,7 +19,10 @@
 
 						  	<div class="media-left">
 							    <a href='{{ url("article/{$article->id}.html") }}'>
-							      	<img class="media-object" src='{{ url("storage/article/{$article->thumb}") }}' alt="...">
+							    	<div class="radius">
+							      		<img class="media-object" src='{{ url("storage/article/{$article->thumb}") }}' alt="...">
+							    		
+							    	</div>
 							    </a>
 						    </div>
 
