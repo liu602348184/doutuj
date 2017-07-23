@@ -2,7 +2,7 @@
 * @Author: liu602348184
 * @Date:   2017-07-12 22:57:11
 * @Last Modified by:   liu602348184
-* @Last Modified time: 2017-07-24 00:25:07
+* @Last Modified time: 2017-07-24 00:32:35
 */
 html{
 	overflow-y: scroll;
@@ -156,14 +156,9 @@ body{
 }
 
 .articlelist .media-left{
-	/*display: block;
-	float: left;*/
+	border-radius: 4px;
 	height: 100px;
 	overflow: hidden;
-}
-
-.articlelist .media-object{
-	border-radius: 4px;
 }
 
 .articlelist .media-bottom{
