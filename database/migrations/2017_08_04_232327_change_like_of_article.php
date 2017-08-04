@@ -14,7 +14,7 @@ class ChangeLikeOfArticle extends Migration
     public function up()
     {
         Schema::table('article', function (Blueprint $table) {
-            $table->integer('like')->nullable();
+            $table->integer('like')->nullable()->change();
         });
     }
 
