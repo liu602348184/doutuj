@@ -2,7 +2,7 @@
 * @Author: liu602348184
 * @Date:   2017-07-12 22:57:11
 * @Last Modified by:   liu602348184
-* @Last Modified time: 2017-08-04 18:54:24
+* @Last Modified time: 2017-08-04 19:05:45
 */
 html{
 	overflow-y: scroll;
@@ -97,8 +97,9 @@ body{
 .facelist>li{
 	display: block;
 	float: left;
-	border: solid 1px #ddd;
-	margin: 2px;
+	/*border: solid 1px #ddd;*/
+	/*margin: 2px;*/
+	padding: 5px;
 	overflow: hidden;
 }
 
@@ -107,7 +108,8 @@ body{
     height: 200px;
     text-align: center;
     line-height: 200px;
-    margin: auto;
+    border: solid 1px #ddd;
+    width: 100%;
 }
 
 .facelist>li>.facepic>img{
