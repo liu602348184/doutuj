@@ -2,7 +2,7 @@
 * @Author: liu602348184
 * @Date:   2017-07-12 22:57:11
 * @Last Modified by:   liu602348184
-* @Last Modified time: 2017-08-04 19:16:28
+* @Last Modified time: 2017-08-04 19:25:57
 */
 html{
 	overflow-y: scroll;
@@ -148,6 +148,10 @@ body{
 
 .imglist>li{
 	display: inline-block; 
+}
+
+.imglist>li>img{
+	max-width: 100%
 }
 
 .news .media-body{
