@@ -5,7 +5,7 @@
 		<div class="row">
 			<div class="col-xs-12 col-md-12">
 				<div class="page-header">
-				  	<h3>{{ $title }}</h3>
+				  	<h1>{{ $title }}</h1>
 				</div>
 			</div>
 		</div>

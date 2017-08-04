@@ -6,7 +6,7 @@
 		<div class="row">
 			<div class="col-xs-12 col-md-8">
 				<div class="page-header">
-				  	<h3>{{ $subtitle }}</h3>
+				  	<h1>{{ $subtitle }}</h1>
 				</div>
 				<ul class="facelist">
 					@foreach($facelist as $face)

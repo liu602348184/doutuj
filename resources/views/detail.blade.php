@@ -15,7 +15,7 @@
 		<div class="col-xs-12 col-md-8">
 			<div class="detail">
 				<div class="page-header">
-				  	<h3>{{ $article->title }}</h3>
+				  	<h1>{{ $article->title }}</h1>
 				  	<div class="detail-info">
 				  		<div class="pull-left"><p><span class="glyphicon glyphicon-time"></span>&nbsp;{{ $article->created_at }}</p></div>
 				  		<div class="pull-right">

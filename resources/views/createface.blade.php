@@ -5,7 +5,7 @@
 		<div class="row">
 			<div class="col-xs-12 col-md-12">
 				<div class="page-header">
-				  	<h3>{{ $title }} <small>快速生成表情包</small></h3>
+				  	<h1>{{ $title }} <small>在线快速生成表情包</small></h1>
 				</div>
 			</div>
 		</div>
