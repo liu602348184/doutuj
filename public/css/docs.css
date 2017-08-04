@@ -2,7 +2,7 @@
 * @Author: liu602348184
 * @Date:   2017-07-12 22:57:11
 * @Last Modified by:   liu602348184
-* @Last Modified time: 2017-08-04 20:08:57
+* @Last Modified time: 2017-08-05 03:07:22
 */
 html{
 	overflow-y: scroll;
@@ -132,7 +132,7 @@ h1{
 .articlelist>li{
 	display: block;
 	float: left;
-	padding: 10px;
+	padding: 7px;
 	border-left: dashed 1px #ddd;
     border-bottom: dashed 1px #ddd;
 	height: 140px;
