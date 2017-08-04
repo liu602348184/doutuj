@@ -9,8 +9,8 @@
         <meta name="renderer" content="webkit">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" href="{{ url('/favicon.ico') }}">
-        <link rel="stylesheet" href="{{ env('APP_URL') }}/css/bootstrap.min.css">
-        <link rel="stylesheet" href="{{ env('APP_URL') }}/css/docs.css">
+        <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/docs.css') }}">
         <!--[if lt IE 9]>
             <script src="{{ env('APP_URL') }}/js/html5.js"></script>
             <script src="{{ env('APP_URL') }}/js/respond.src.js"></script>
