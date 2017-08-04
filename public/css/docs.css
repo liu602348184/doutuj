@@ -2,7 +2,7 @@
 * @Author: liu602348184
 * @Date:   2017-07-12 22:57:11
 * @Last Modified by:   liu602348184
-* @Last Modified time: 2017-08-04 19:05:45
+* @Last Modified time: 2017-08-04 19:16:28
 */
 html{
 	overflow-y: scroll;
@@ -99,7 +99,7 @@ body{
 	float: left;
 	/*border: solid 1px #ddd;*/
 	/*margin: 2px;*/
-	padding: 5px;
+	padding: 2px;
 	overflow: hidden;
 }
 
