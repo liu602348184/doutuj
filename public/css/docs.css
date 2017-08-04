@@ -2,7 +2,7 @@
 * @Author: liu602348184
 * @Date:   2017-07-12 22:57:11
 * @Last Modified by:   liu602348184
-* @Last Modified time: 2017-07-24 00:43:56
+* @Last Modified time: 2017-08-04 18:54:24
 */
 html{
 	overflow-y: scroll;
@@ -107,6 +107,7 @@ body{
     height: 200px;
     text-align: center;
     line-height: 200px;
+    margin: auto;
 }
 
 .facelist>li>.facepic>img{
