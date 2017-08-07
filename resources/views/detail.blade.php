@@ -25,6 +25,9 @@
 								&nbsp;
 								<font size="4"><span class="glyphicon glyphicon-eye-open"></span></font>
 								<span class="text show-count">({{ $article->show }})</span>
+								&nbsp;
+								<font size="4"><span class="glyphicon glyphicon-floppy-save"></span></font>
+								<span class="text"><a href='{{ url("storage/download/{$article->zip}") }}'>下载</a></span>
 							</p>
 				  		</div>
 				  		<div style="clear: both"></div>
