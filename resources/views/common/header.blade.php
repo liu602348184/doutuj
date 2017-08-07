@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <title>{{ $title }} | 斗图界</title>
         <meta name="description" content="斗图界是一个专注于表情包斗图的网站，快速帮你生成表情包，让你在斗图大战中反败为胜！"/>
-        <meta name="keywords" content="斗图界,{{ $title }},表情包下载,快速生成表情包"/>
+        <meta name="keywords" content="斗图界,{{ $title }},快速生成表情包,斗图,表情图"/>
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         <meta name="renderer" content="webkit">
         <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
