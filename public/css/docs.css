@@ -2,7 +2,7 @@
 * @Author: liu602348184
 * @Date:   2017-07-12 22:57:11
 * @Last Modified by:   liu602348184
-* @Last Modified time: 2017-08-07 19:06:43
+* @Last Modified time: 2017-08-07 20:17:35
 */
 html{
 	overflow-y: scroll;
@@ -29,7 +29,7 @@ h1{
 }
 
 .page-header .glyphicon{
-	vertical-align: text-top;
+	vertical-align: top;
 }
 
 #bs-example-navbar-collapse{
