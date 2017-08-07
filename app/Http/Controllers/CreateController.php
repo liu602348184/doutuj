@@ -23,7 +23,9 @@ class CreateController extends Controller
     	// echo bcrypt("MTk5MzAwMDdsaXU=");die;
         $list = TemplateFace::get()->all();
         $navlist = \App\Navbar::orderBy('sort')->get()->all();
-        return view('createface', ['tpllist' => $list, 'navs' => $navlist, 'title' => '在线生成表情包']);
+        $news = \App\Article::orderBy('id', 'desc')->limit(10)->get()->all();
+        $hot = \App\Article::orderBy('like', 'desc')->limit(10)->get()->all();
+        return view('createface', ['tpllist' => $list, 'news' => $news, 'hot' => $hot, 'navs' => $navlist, 'title' => '在线生成表情包']);
     }
 
     public function download($id){

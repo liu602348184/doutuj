@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="{{ asset('css/docs.css') }}">
         <!--[if lt IE 9]>
             <script src="{{ env('APP_URL') }}/js/html5.js"></script>
-            <script src="{{ env('APP_URL') }}/js/respond.src.js"></script>
+            <script src="{{ env('APP_URL') }}/js/respond.min.js"></script>
         <![endif]-->
     </head>
     <body>

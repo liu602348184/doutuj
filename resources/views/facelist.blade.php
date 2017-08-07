@@ -19,7 +19,7 @@
 			</div>
 			<div class="hidden-xs col-md-4">
 				<div class="page-header" style="margin-top:27px">
-				  	<h4>最新文章</h4>
+				  	<h4><font class="glyphicon glyphicon-list-alt"></font>&nbsp;最新文章  <small><a href="{{ url('article') }}">更多>></a></small></h4>
 				</div>
 				<div class="news" style="padding-top: 10px">
 					@foreach($news as $article)

@@ -2,15 +2,12 @@
 
 @section('content')
 	<div class="container">
-		<div class="row">
+		<div class="row" style="margin-bottom:30px">
 			<div class="col-xs-12 col-md-12">
 				<div class="page-header">
 				  	<h1>{{ $title }} <small>快速生成表情包</small></h1>
 				</div>
 			</div>
-		</div>
-
-		<div class="row">
 			<div class="col-xs-12 col-md-3">
 				<div class="editpic">
 					<div class="thumbnail" style="margin-bottom:10px">
@@ -25,7 +22,7 @@
 				</div>
 			</div>
 
-			<div class="col-xs-12 col-md-9" style="height:353px">
+			<div class="col-xs-12 col-md-9" style="height:310px">
 				<div class="scrollpanel">
 					<ul id="piclist">
 						@foreach ($tpllist as $li)
@@ -35,6 +32,50 @@
 						@endforeach
 					</ul>
 					<div style="clear:both"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-xs-12 col-md-6">
+				<div class="page-header">
+				  	<h3><font class="glyphicon glyphicon-list-alt"></font>&nbsp;最新文章  <small><a href="{{ url('article') }}">更多>></a></small></h3>
+				</div>
+				<div class="news" >
+				@foreach($news as $article)
+		        	<div class="media">
+					  	<div class="media-left">
+						    <a href='{{ url("article/{$article->id}") }}.html'>
+						      	<img class="media-object" width="50" src='{{ url("storage/article/{$article->thumb}") }}' alt="...">
+						    </a>
+					    </div>
+						<div class="media-body">
+						    <h4 class="media-heading"><a href='{{ url("article/{$article->id}") }}.html'>{{ $article->title }}</a></h4>
+						    {{ $article->desc }}
+						</div>
+					</div>
+				@endforeach
+				</div>
+			</div>
+
+			<div class="col-xs-12 col-md-6">
+				<div class="page-header">
+				  	<h3><font class="glyphicon glyphicon-fire"></font>&nbsp;最热文章  <small><a href="{{ url('article') }}">更多>></a></small></h3>
+				</div>
+				<div class="news" >
+				@foreach($hot as $article)
+		        	<div class="media">
+					  	<div class="media-left">
+						    <a href='{{ url("article/{$article->id}") }}.html'>
+						      	<img class="media-object" width="50" src='{{ url("storage/article/{$article->thumb}") }}' alt="...">
+						    </a>
+					    </div>
+						<div class="media-body">
+						    <h4 class="media-heading"><a href='{{ url("article/{$article->id}") }}.html'>{{ $article->title }}</a></h4>
+						    {{ $article->desc }}
+						</div>
+					</div>
+				@endforeach
 				</div>
 			</div>
 		</div>
