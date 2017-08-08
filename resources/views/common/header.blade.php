@@ -7,7 +7,7 @@
         <meta name="keywords" content="斗图界,{{ $title }},快速生成表情包,斗图,表情图"/>
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         <meta name="renderer" content="webkit">
-        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
         <link rel="shortcut icon" href="{{ url('/favicon.ico') }}">
         <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
         <link rel="stylesheet" href="{{ asset('css/docs.css') }}">
