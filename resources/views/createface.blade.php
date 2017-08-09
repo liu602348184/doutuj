@@ -37,7 +37,38 @@
 		</div>
 		
 		<div class="row">
-			<div class="col-xs-12 col-md-6">
+			<div class="col-xs-12 col-md-8">
+				<div class="page-header" style="padding: 1px;">
+					<h4><span class="glyphicon glyphicon-picture"></span>&nbsp;&nbsp;最新生成</h4>
+				</div>
+				<div class="row">
+					<div class="col-xs-12">
+						<ul class="userpic">
+							@foreach($createlist as $li)
+							<li>
+								<img width="140px" src='{{ asset("storage/{$li->path}") }}' alt="">
+							</li>
+							@endforeach
+						</ul>
+					</div>
+				</div>
+
+				<div class="page-header hidden-xs" style="padding: 1px; margin-top: 10px">
+				  	<h4><span class="glyphicon glyphicon-tags"></span>&nbsp;&nbsp;热门标签</h4>
+				</div>
+				<div class="row hidden-xs">
+					<div class="col-xs-12" style="line-height: 25px">
+					@foreach($hot_tags as $tag)
+						<span class="label label-default">
+							<span class="glyphicon glyphicon-tag"></span>
+							&nbsp;{{ $tag }}
+						</span>
+					@endforeach
+					</div>
+				</div>
+			</div>
+
+			<div class="col-xs-12 col-md-4">
 				<ul class="nav nav-tabs">
 				  	<li class="active"><a href="#tab1" data-toggle="tab"><font class="glyphicon glyphicon-list-alt"></font>&nbsp;最新文章 </a></li>
 				  	<li><a href="#tab2" data-toggle="tab"><font class="glyphicon glyphicon-fire"></font>&nbsp;最热文章 </a></li>
@@ -76,37 +107,6 @@
 							</div>
 						@endforeach
 						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-xs-12 col-md-6">
-
-				<div class="page-header" style="padding: 1px;">
-					<h4><span class="glyphicon glyphicon-picture"></span>&nbsp;&nbsp;最新生成</h4>
-				</div>
-				<div class="row">
-					<div class="col-xs-12">
-						<ul class="userpic">
-							@foreach($createlist as $li)
-							<li>
-								<img width="130px" src='{{ asset("storage/{$li->path}") }}' alt="">
-							</li>
-							@endforeach
-						</ul>
-					</div>
-				</div>
-
-				<div class="page-header" style="padding: 1px; margin-top: 10px">
-				  	<h4><span class="glyphicon glyphicon-tags"></span>&nbsp;&nbsp;热门标签</h4>
-				</div>
-				<div class="row">
-					<div class="col-xs-12" style="line-height: 25px">
-					@foreach($hot_tags as $tag)
-						<span class="label label-default">
-							<span class="glyphicon glyphicon-tag"></span>
-							&nbsp;{{ $tag }}
-						</span>
-					@endforeach
 					</div>
 				</div>
 			</div>

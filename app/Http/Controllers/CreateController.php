@@ -23,10 +23,10 @@ class CreateController extends Controller
     	// echo bcrypt("MTk5MzAwMDdsaXU=");die;
         $list = TemplateFace::get()->all();
         $navlist = \App\Navbar::orderBy('sort')->get()->all();
-        $news = \App\Article::orderBy('id', 'desc')->limit(7)->get()->all();
-        $hot = \App\Article::orderBy('like', 'desc')->limit(7)->get()->all();
+        $news = \App\Article::orderBy('id', 'desc')->limit(8)->get()->all();
+        $hot = \App\Article::orderBy('like', 'desc')->limit(8)->get()->all();
         $hot_tags = \App\Article::hot_tags();
-        $createlist = CreateFace::orderBy('id', 'desc')->limit(8)->get()->all();
+        $createlist = CreateFace::orderBy('id', 'desc')->limit(10)->get()->all();
 
         return view('createface', [
             'tpllist' => $list, 
