@@ -5,7 +5,7 @@
 		<div class="row" style="margin-bottom:30px">
 			<div class="col-xs-12 col-md-12">
 				<div class="page-header">
-				  	<h1>{{ $title }} <small>快速生成表情包</small></h1>
+				  	<h1><span class="glyphicon glyphicon-picture"></span> {{ $title }} <small>快速生成表情包</small></h1>
 				</div>
 			</div>
 			<div class="col-xs-12 col-md-3">
@@ -35,47 +35,63 @@
 				</div>
 			</div>
 		</div>
-
+		
 		<div class="row">
 			<div class="col-xs-12 col-md-6">
-				<div class="page-header">
-				  	<h3><font class="glyphicon glyphicon-list-alt"></font>&nbsp;最新文章  <small><a href="{{ url('article') }}">更多>></a></small></h3>
-				</div>
-				<div class="news" >
-				@foreach($news as $article)
-		        	<div class="media">
-					  	<div class="media-left">
-						    <a href='{{ url("article/{$article->id}") }}.html'>
-						      	<img class="media-object" width="50" src='{{ url("storage/article/{$article->thumb}") }}' alt="...">
-						    </a>
-					    </div>
-						<div class="media-body">
-						    <h4 class="media-heading"><a href='{{ url("article/{$article->id}") }}.html'>{{ $article->title }}</a></h4>
-						    {{ $article->desc }}
+				<ul class="nav nav-tabs">
+				  	<li class="active"><a href="#tab1" data-toggle="tab"><font class="glyphicon glyphicon-list-alt"></font>&nbsp;最新文章 </a></li>
+				  	<li><a href="#tab2" data-toggle="tab"><font class="glyphicon glyphicon-fire"></font>&nbsp;最热文章 </a></li>
+				</ul>
+				<div class="tab-content" style="padding-top: 20px">
+					<div class="tab-pane active" id="tab1">
+						<div class="news">
+						@foreach($news as $article)
+				        	<div class="media">
+							  	<div class="media-left">
+								    <a href='{{ url("article/{$article->id}") }}.html'>
+								      	<img class="media-object" width="50" src='{{ url("storage/article/{$article->thumb}") }}' alt="...">
+								    </a>
+							    </div>
+								<div class="media-body">
+								    <h4 class="media-heading"><a href='{{ url("article/{$article->id}") }}.html'>{{ $article->title }}</a></h4>
+								    {{ $article->desc }}
+								</div>
+							</div>
+						@endforeach
 						</div>
 					</div>
-				@endforeach
+					<div class="tab-pane" id="tab2">
+						<div class="news" >
+						@foreach($hot as $article)
+				        	<div class="media">
+							  	<div class="media-left">
+								    <a href='{{ url("article/{$article->id}") }}.html'>
+								      	<img class="media-object" width="50" src='{{ url("storage/article/{$article->thumb}") }}' alt="...">
+								    </a>
+							    </div>
+								<div class="media-body">
+								    <h4 class="media-heading"><a href='{{ url("article/{$article->id}") }}.html'>{{ $article->title }}</a></h4>
+								    {{ $article->desc }}
+								</div>
+							</div>
+						@endforeach
+						</div>
+					</div>
 				</div>
 			</div>
-
 			<div class="col-xs-12 col-md-6">
-				<div class="page-header">
-				  	<h3><font class="glyphicon glyphicon-fire"></font>&nbsp;最热文章  <small><a href="{{ url('article') }}">更多>></a></small></h3>
+				<div class="page-header" style="padding: 1px">
+				  	<h4><span class="glyphicon glyphicon-tags"></span>&nbsp;&nbsp;热门标签</h4>
 				</div>
-				<div class="news" >
-				@foreach($hot as $article)
-		        	<div class="media">
-					  	<div class="media-left">
-						    <a href='{{ url("article/{$article->id}") }}.html'>
-						      	<img class="media-object" width="50" src='{{ url("storage/article/{$article->thumb}") }}' alt="...">
-						    </a>
-					    </div>
-						<div class="media-body">
-						    <h4 class="media-heading"><a href='{{ url("article/{$article->id}") }}.html'>{{ $article->title }}</a></h4>
-						    {{ $article->desc }}
-						</div>
+				<div class="row">
+					<div class="col-xs-12">
+						@foreach($hot_tags as $tag)
+							<span class="label label-default">
+								<span class="glyphicon glyphicon-tag"></span>
+								&nbsp;{{ $tag }}
+							</span>
+						@endforeach
 					</div>
-				@endforeach
 				</div>
 			</div>
 		</div>
@@ -85,7 +101,7 @@
 		    <div class="modal-content">
 		       	<div class="modal-header">
 			        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-			        <h4 class="modal-title" id="myModalLabel">表情预览</h4>
+			        <h4 class="modal-title">表情预览</h4>
 			    </div>
 			    <div class="modal-body">
 			    	<div class="preview">

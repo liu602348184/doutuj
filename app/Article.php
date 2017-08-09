@@ -26,4 +26,23 @@ class Article extends Model
     	$this->show += 1;
     	$this->save();
     }
+
+    public static function hot_tags(){
+        $hots = \App\Article::orderBy('show', 'desc')->limit(20)->get()->all();
+
+        $arr = [];
+
+        foreach ($hots as $key => $value) {
+            if(!$value->tags){
+                continue;
+            }
+
+            $tags = explode(',', $value->tags);
+            $arr = array_merge($arr, $tags);
+        }
+
+        $arr = array_flip(array_flip($arr));
+
+        return $arr;
+    }
 }
