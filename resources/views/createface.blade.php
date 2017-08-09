@@ -84,19 +84,19 @@
 				  	<h4><span class="glyphicon glyphicon-tags"></span>&nbsp;&nbsp;热门标签</h4>
 				</div>
 				<div class="row">
-					<div class="col-xs-12">
-						@foreach($hot_tags as $tag)
-							<span class="label label-default">
-								<span class="glyphicon glyphicon-tag"></span>
-								&nbsp;{{ $tag }}
-							</span>
-						@endforeach
+					<div class="col-xs-12" style="line-height: 25px">
+					@foreach($hot_tags as $tag)
+						<span class="label label-default">
+							<span class="glyphicon glyphicon-tag"></span>
+							&nbsp;{{ $tag }}
+						</span>
+					@endforeach
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div class="modal fade bs-example-modal-sm" id="createface" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+	<div class="modal fade" id="createface" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
 		<div class="modal-dialog modal-sm" role="document">
 		    <div class="modal-content">
 		       	<div class="modal-header">
