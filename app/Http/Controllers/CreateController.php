@@ -23,9 +23,10 @@ class CreateController extends Controller
     	// echo bcrypt("MTk5MzAwMDdsaXU=");die;
         $list = TemplateFace::get()->all();
         $navlist = \App\Navbar::orderBy('sort')->get()->all();
-        $news = \App\Article::orderBy('id', 'desc')->limit(5)->get()->all();
-        $hot = \App\Article::orderBy('like', 'desc')->limit(5)->get()->all();
+        $news = \App\Article::orderBy('id', 'desc')->limit(8)->get()->all();
+        $hot = \App\Article::orderBy('like', 'desc')->limit(8)->get()->all();
         $hot_tags = \App\Article::hot_tags();
+        $createlist = CreateFace::orderBy('id', 'desc')->limit(8)->get()->all();
 
         return view('createface', [
             'tpllist' => $list, 
@@ -33,6 +34,7 @@ class CreateController extends Controller
             'hot' => $hot, 
             'navs' => $navlist, 
             'hot_tags' => $hot_tags,
+            'createlist' => $createlist,
             'title' => '在线生成表情包'
         ]);
     }

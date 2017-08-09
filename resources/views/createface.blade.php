@@ -80,7 +80,23 @@
 				</div>
 			</div>
 			<div class="col-xs-12 col-md-6">
-				<div class="page-header" style="padding: 1px">
+
+				<div class="page-header" style="padding: 1px;">
+					<h4><span class="glyphicon glyphicon-picture"></span>&nbsp;&nbsp;最新生成</h4>
+				</div>
+				<div class="row">
+					<div class="col-xs-12">
+						<ul class="userpic">
+							@foreach($createlist as $li)
+							<li>
+								<img width="130px" src='{{ asset("storage/{$li->path}") }}' alt="">
+							</li>
+							@endforeach
+						</ul>
+					</div>
+				</div>
+
+				<div class="page-header" style="padding: 1px; margin-top: 10px">
 				  	<h4><span class="glyphicon glyphicon-tags"></span>&nbsp;&nbsp;热门标签</h4>
 				</div>
 				<div class="row">
