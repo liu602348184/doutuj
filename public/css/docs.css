@@ -2,7 +2,7 @@
 * @Author: liu602348184
 * @Date:   2017-07-12 22:57:11
 * @Last Modified by:   liu602348184
-* @Last Modified time: 2017-08-09 20:21:31
+* @Last Modified time: 2017-08-10 23:56:01
 */
 html{
 	overflow-y: scroll;
@@ -208,13 +208,13 @@ h1{
     float: left;
     padding: 0px;
     margin: 0px;
-    margin-left: -5px;
+    margin-left: -3px;
 }
 
 .userpic>li{
 	display: block;
     float: left;
-    margin: 4px;
+    margin: 3px;
     border: dashed 1px #ddd;
 }
 /*.media-body{
