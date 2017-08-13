@@ -2,7 +2,7 @@
 * @Author: liu602348184
 * @Date:   2017-07-12 22:57:11
 * @Last Modified by:   liu602348184
-* @Last Modified time: 2017-08-10 23:56:01
+* @Last Modified time: 2017-08-13 21:55:55
 */
 html{
 	overflow-y: scroll;
@@ -170,7 +170,8 @@ h1{
 }
 
 .news .media{
-	height: 50px;
+	margin-top: 10px;
+	height: 54px;
 	overflow: hidden;
 }
 
