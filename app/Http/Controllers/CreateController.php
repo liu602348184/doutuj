@@ -68,8 +68,8 @@ class CreateController extends Controller
         $img = imagecreatefromstring(file_get_contents(storage_path("app/public/{$row->path}")));
         $font = public_path("fonts/simhei.ttf");
         $black = imagecolorallocate($img, 0x00, 0x00, 0x00);
-        $width = imagesx($img); 
-        $center = ($width / 2 ) - (int)(mb_strlen($phrase) * 25 / 2);
+        $width = imagesx($img); //dd((strlen($phrase) + mb_strlen($phrase,'UTF8'))/2);
+        $center = ($width / 2 ) - (int)((strlen($phrase) + mb_strlen($phrase,'UTF8')) * 14 / 4);
         // var_dump(mb_strlen($phrase) * 25);die;
         imagefttext($img, 20, 0, $center, 280, $black, $font, $phrase);
         // $img->text($phrase, 150, 280, function($font) {
